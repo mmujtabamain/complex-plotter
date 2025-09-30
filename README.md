@@ -1,7 +1,5 @@
-# cpp-template
-C++ template with `vcpkg` as `git submodule` and setup with `CMake`.
+# Complex Plotter
 
-- Project was created on MacOS, has not been tested on Windows or Linux
-- Uses `vcpkg`
-- Run `./setup` to setup the project i.e installing packages
-- use `./run` for running afterwards
+> ## IN DEVELOPEMENT
+
+A desktop graph plotter just like [desmos](https://www.desmos.com/) but allows plotting and visualization of complex numbers as well.

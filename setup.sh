@@ -30,12 +30,11 @@ else
     echo -e "${GREEN}vcpkg already bootstrapped. ${RESET}"
 fi
 
-# install packages (for current template)
-./external/vcpkg/vcpkg install fmt
+echo -e "${CYAN}To install packages run ./external/vcpkg/vcpkg install <package_name>${RESET}"
 
-# setup cmake preset; REMOVE after setting up preset
-cmake --preset=default
-echo -e "${PURPLE}In VS Code, open Command Palette and search for 'CMake: Select Build Preset' select 'Default with vcpkg' ${RESET}"
-echo -e "${PURPLE}After succesfully setting up preset, syntax highlighting along with other features should be active. You can safely remove the preset section from "setup.sh" ${RESET}"
+# install packages (for current template)
+# ./external/vcpkg/vcpkg install fmt
+# ./external/vcpkg/vcpkg install boost-iostreams boost-filesystem boost-system
+# curl -L https://raw.githubusercontent.com/dstahlke/gnuplot-iostream/master/gnuplot-iostream.h -o external/include/gnuplot-iostream.h
 
 echo -e "${CYAN}Run ./run.sh for running the program ${RESET}"

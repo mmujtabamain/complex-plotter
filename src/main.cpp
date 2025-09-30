@@ -1,7 +1,10 @@
-#include <fmt/core.h>
+#include "Scene.hpp"
 
-int main() {
-    fmt::print("Hello from C++ template!\n");
+#include "Helpers.hpp"
 
-    return 0;
+int main()
+{
+    engine::Scene scene({800, 600});
+
+    scene.StartLoop();
 }

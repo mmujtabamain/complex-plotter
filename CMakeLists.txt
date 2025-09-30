@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-no_warn_duplicate_libraries")
 
 # CHANGE: IMPORT PACKAGES
-find_package(fmt CONFIG REQUIRED)
+find_package(SFML COMPONENTS Network Graphics Window Audio System CONFIG REQUIRED)
 # END CHANGE
 
 # get all files in src directory
@@ -59,13 +59,13 @@ add_executable(
 target_include_directories(
     main PRIVATE
     ${FOLDERS}
-    "${CMAKE_SOURCE_DIR}/external/included"
+    "${CMAKE_SOURCE_DIR}/external/include"
 )
 # files in external/included are also included to allow downloading libraries and using them
 
 # CHANGE: link installed libraries here
 target_link_libraries(
     main PRIVATE
-    fmt::fmt
+    SFML::Network SFML::Graphics SFML::Window SFML::Audio SFML::System
 )
 # END CHANGE
